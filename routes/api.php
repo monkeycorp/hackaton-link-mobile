@@ -16,3 +16,6 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get('/', 'ValidateUserController@index');
+Route::post('validateUser', 'ValidateUserController@store');
+Route::post('validateDevice', 'ValidateDeviceController@store');
